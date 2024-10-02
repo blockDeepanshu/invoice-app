@@ -1,0 +1,23 @@
+{
+  "name": "invoice-app",
+  "version": "1.0.0",
+  "description": "This is a Invoice generator app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blockDeepanshu/invoice-app.git"
+  },
+  "keywords": [
+    "Invoice",
+    "MERN"
+  ],
+  "author": "Deepanshu Chauhan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/blockDeepanshu/invoice-app/issues"
+  },
+  "homepage": "https://github.com/blockDeepanshu/invoice-app#readme"
+}
