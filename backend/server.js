@@ -3,6 +3,7 @@ import cookieParser from "cookie-parser";
 import "dotenv/config";
 import morgan from "morgan";
 import express from "express";
+import { morganMiddleware, systemLogs } from "./utils/Logger.js";
 
 const app = express();
 
@@ -12,6 +13,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use(cookieParser());
+app.use(morganMiddleware);
 
 const PORT = process.env.PORT || 5000;
 
@@ -25,4 +27,5 @@ app.listen(PORT, () => {
       process.env.NODE_ENV
     )} mode on port ${chalk.blue.bold(PORT)}`
   );
+  systemLogs.info(`Server running in ${process.env.NODE_ENV} on port ${PORT}`);
 });
